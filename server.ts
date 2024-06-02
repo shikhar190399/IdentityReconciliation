@@ -1,8 +1,8 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
-import router from './router/routes';
-import { connect } from './database/connect';
+import router from './src/router/routes';
+import { connect } from './src/database/connect';
 
 const NAMESPACE = 'SERVER CONNECTION'
 const app = express();
