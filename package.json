@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "build": "npx tsc",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "ts-node src/server.ts"
+    "debug": "ts-node src/server.ts",
+    "dev-migrate-up": "cross-env NODE_ENV=development sequelize db:migrate",
+    "dev-migrate-down": "cross-env NODE_ENV=development sequelize db:migrate;undo"
   },
   "author": "",
   "license": "ISC",
